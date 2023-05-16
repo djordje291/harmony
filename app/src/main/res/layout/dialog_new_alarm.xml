@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/blue"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/cancelNewAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:tint="@color/white"
+        android:src="@drawable/ic_baseline_close_36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_alarm"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cancelNewAlarm"
+        app:layout_constraintEnd_toStartOf="@+id/addNewAlarm"
+        app:layout_constraintStart_toEndOf="@+id/cancelNewAlarm"
+        app:layout_constraintTop_toTopOf="@+id/cancelNewAlarm" />
+
+    <ImageButton
+        android:id="@+id/addNewAlarm"
+        android:src="@drawable/ic_baseline_check_36"
+        android:tint="@color/white"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <NumberPicker
+        android:id="@+id/hoursNewAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:theme="@style/numberPickerStyle"
+        app:layout_constraintEnd_toStartOf="@+id/minutesNewAlarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNewAlarm" />
+
+    <NumberPicker
+        android:id="@+id/minutesNewAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/numberPickerStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hoursNewAlarm"
+        app:layout_constraintTop_toTopOf="@id/hoursNewAlarm" />
+
+    <TextView
+        android:id="@+id/qr"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qr_code"
+        android:textColor="@color/white"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/hoursNewAlarm"
+        app:layout_constraintStart_toStartOf="@+id/hoursNewAlarm"
+        app:layout_constraintTop_toBottomOf="@+id/hoursNewAlarm" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/qrSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/qr"
+        app:layout_constraintTop_toBottomOf="@+id/hoursNewAlarm"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

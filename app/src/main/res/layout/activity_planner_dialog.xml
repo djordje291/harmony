@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".ui.planner.PlannerDialog">
+
+    <ImageButton
+        android:id="@+id/saveDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="@color/white"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_check_36"
+        android:layout_margin="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_margin="24dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleDialog"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_style"
+        app:layout_constraintStart_toStartOf="@+id/t"
+        app:layout_constraintTop_toBottomOf="@+id/t" />
+
+    <TextView
+        android:id="@+id/tm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/duration"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/t"
+        app:layout_constraintStart_toStartOf="@+id/titleDialog"
+        app:layout_constraintTop_toBottomOf="@+id/titleDialog" />
+
+    <NumberPicker
+        android:id="@+id/hoursDialogP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:theme="@style/numberPickerStyle"
+        app:layout_constraintEnd_toStartOf="@+id/minutesDialogP"
+        app:layout_constraintStart_toStartOf="@+id/tm"
+        app:layout_constraintTop_toBottomOf="@+id/tm" />
+
+    <NumberPicker
+        android:id="@+id/minutesDialogP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/numberPickerStyle"
+        app:layout_constraintBottom_toBottomOf="@+id/hoursDialogP"
+        app:layout_constraintEnd_toEndOf="@+id/titleDialog"
+        app:layout_constraintStart_toEndOf="@+id/hoursDialogP"
+        app:layout_constraintTop_toTopOf="@+id/hoursDialogP" />
+
+    <TextView
+        android:id="@+id/nt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/note"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/t"
+        app:layout_constraintStart_toStartOf="@+id/tm"
+        app:layout_constraintTop_toBottomOf="@+id/hoursDialogP" />
+
+    <EditText
+        android:id="@+id/noteDialog"
+        android:layout_width="match_parent"
+        android:hint="@string/optional"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="12dp"
+        android:ems="5"
+        android:maxLines="2"
+        android:gravity="start|top"
+        android:background="@drawable/edittext_style"
+        android:inputType="text"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/nt" />
+
+    <TextView
+        android:id="@+id/n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notification"
+        android:textColor="@color/white"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/notificationP"
+        app:layout_constraintEnd_toStartOf="@+id/notificationP"
+        app:layout_constraintTop_toTopOf="@+id/notificationP" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/notificationP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:theme="@style/switchColor"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

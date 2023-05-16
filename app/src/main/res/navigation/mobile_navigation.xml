@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_planner">
+
+    <fragment
+        android:id="@+id/navigation_planner"
+        android:name="com.djordjeratkovic.harmony.ui.planner.PlannerFragment"
+        android:label="@string/title_planner"
+        tools:layout="@layout/fragment_planner" />
+
+    <fragment
+        android:id="@+id/navigation_task"
+        android:name="com.djordjeratkovic.harmony.ui.task.TaskFragment"
+        android:label="@string/title_task"
+        tools:layout="@layout/fragment_task" />
+
+    <fragment
+        android:id="@+id/navigation_alarm"
+        android:name="com.djordjeratkovic.harmony.ui.alarm.AlarmFragment"
+        android:label="@string/title_alarm"
+        tools:layout="@layout/fragment_alarm" />
+</navigation>
