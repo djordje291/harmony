@@ -1,6 +1,6 @@
 # Harmony App
 
-Native android app for planning your day. It is also a relative alarm and for saving dayly tasks. SQLite with
+Native android app for planning your day. It is also a relative alarm and for saving daily tasks. SQLite with
 android room is used for the backend. 
 
 ## Screenshots
